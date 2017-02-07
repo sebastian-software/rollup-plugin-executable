@@ -22,6 +22,11 @@ test((t) =>
     })
     .then(({ mode }) =>
     {
-      t.is(mode, 0o100755)
+      if (process.platform === "win32") {
+        // on windows changing file mode has no influence to file mode
+        t.is(true, true)
+      } else {
+        t.is(mode, 0o100755)
+      }
     })
 )
