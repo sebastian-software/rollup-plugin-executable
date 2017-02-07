@@ -1,0 +1,16 @@
+anguage: node_js
+
+node_js:
+  - 6
+  - 7
+
+matrix:
+  fast_finish: true
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+#notifications:
+#  slack:
+#    secure: xyz
