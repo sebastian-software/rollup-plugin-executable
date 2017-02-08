@@ -18,7 +18,7 @@ The Rollup Executable Plugin makes output file executable on UNIX like operating
 ## Installation
 
 ```console
-$ npm install --save-dev rollup-plugin-rebase
+$ npm install --save-dev rollup-plugin-executable
 ```
 
 
