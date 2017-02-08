@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-executable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The Rollup Rebase Plugin changes output javascript file's executable state to ON on unix like operating systems.",
   "keywords": [
     "rollup-plugin",
