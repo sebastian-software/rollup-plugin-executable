@@ -1,5 +1,7 @@
 # Rollup Executable <br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Build Status Unix][travis-img]][travis] [![Build Status Windows][appveyor-img]][appveyor] [![Dependencies][deps-img]][deps]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sebastian-software/rollup-plugin-executable.svg)](https://greenkeeper.io/)
+
 The Rollup Executable Plugin makes output file executable on UNIX like operating systems.
 
 [sponsor-img]: https://img.shields.io/badge/Sponsored%20by-Sebastian%20Software-692446.svg
