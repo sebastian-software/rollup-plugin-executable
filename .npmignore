@@ -1,3 +1,12 @@
+.npmignore
+.editorconfig
+.eslint*
+
+
+appveyor.yml
+gulpfile.js
+yarn.lock
+
 node_modules/
 src/
 test/
