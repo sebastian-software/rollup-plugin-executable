@@ -2,10 +2,11 @@
 .editorconfig
 .eslint*
 
-
 appveyor.yml
 gulpfile.js
 yarn.lock
+package-lock.json
+testfile
 
 node_modules/
 src/

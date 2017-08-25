@@ -7,7 +7,9 @@ import executablePlugin from "../src"
 const stat = denodeify(fs.stat)
 const writeFile = denodeify(fs.writeFile)
 
-test((t) =>
+/* eslint-disable no-magic-numbers */
+
+test((assert) =>
   writeFile("testfile", "testdata", {
     mode: 0o644
   })
@@ -15,7 +17,7 @@ test((t) =>
     {
       const plugin = executablePlugin()
       plugin.onwrite({
-        dest: "testfile"
+        file: "testfile"
       })
 
       return stat("testfile")
@@ -24,9 +26,9 @@ test((t) =>
     {
       if (process.platform === "win32") {
         // on windows changing file mode has no influence to file mode
-        t.is(true, true)
+        assert.is(true, true)
       } else {
-        t.is(mode, 0o100755)
+        assert.is(mode, 0o100755)
       }
     })
 )
