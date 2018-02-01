@@ -4,13 +4,11 @@ import fs from "fs"
 // Set EXECUTABLE bit on file mode
 const EXECUTABLE_MODE = 0o111
 
-export default function executable(options = {})
-{
+export default function executable(options = {}) {
   return {
     name: "rollup-plugin-executable",
 
-    onwrite: ({ file }) =>
-    {
+    onwrite: ({ file }) => {
       const { mode } = fs.statSync(file)
 
       // eslint-disable-next-line no-bitwise

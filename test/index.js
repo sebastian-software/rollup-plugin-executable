@@ -13,8 +13,7 @@ test((assert) =>
   writeFile("testfile", "testdata", {
     mode: 0o644
   })
-    .then(() =>
-    {
+    .then(() => {
       const plugin = executablePlugin()
       plugin.onwrite({
         file: "testfile"
@@ -22,8 +21,7 @@ test((assert) =>
 
       return stat("testfile")
     })
-    .then(({ mode }) =>
-    {
+    .then(({ mode }) => {
       if (process.platform === "win32") {
         // on windows changing file mode has no influence to file mode
         assert.is(true, true)
