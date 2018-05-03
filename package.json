@@ -54,12 +54,11 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.25.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.6.1",
     "denodeify": "^1.2.1",
-    "eslint-config-readable": "^1.10.2",
-    "prepublish": "^1.6.1",
-    "release-it": "^6.1.1",
-    "rollup": "^0.55.2"
+    "eslint-config-readable": "^1.11.1",
+    "prepublish": "^1.7.0",
+    "rollup": "^0.58.2"
   }
 }
