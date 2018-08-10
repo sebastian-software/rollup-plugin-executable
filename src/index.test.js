@@ -1,4 +1,3 @@
-import test from "ava"
 import fs from "fs"
 import denodeify from "denodeify"
 
@@ -9,7 +8,7 @@ const writeFile = denodeify(fs.writeFile)
 
 /* eslint-disable no-magic-numbers */
 
-test((assert) =>
+test("Makes executable", () =>
   writeFile("testfile", "testdata", {
     mode: 0o644
   })
@@ -24,9 +23,9 @@ test((assert) =>
     .then(({ mode }) => {
       if (process.platform === "win32") {
         // on windows changing file mode has no influence to file mode
-        assert.is(true, true)
+        expect(true).toBe(true)
       } else {
-        assert.is(mode, 0o100755)
+        expect(mode).toBe(0o100755)
       }
     })
 )
