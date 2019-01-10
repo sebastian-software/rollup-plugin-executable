@@ -41,18 +41,18 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0-rc.1"
+    "@babel/runtime": "^7.2.0"
   },
   "devDependencies": {
-    "@babel/register": "^7.0.0-rc.1",
+    "@babel/register": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.4.2",
-    "babel-preset-edge": "^4.10.1",
+    "babel-jest": "^23.6.0",
+    "babel-preset-edge": "^4.14.3",
     "denodeify": "^1.2.1",
-    "eslint-config-readable": "^2.1.4",
-    "jest": "^23.4.2",
-    "preppy": "^4.3.1",
-    "rimraf": "^2.6.2",
-    "rollup": "^0.64.1"
+    "eslint-config-readable": "^2.3.0",
+    "jest": "^23.6.0",
+    "preppy": "^7.4.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.1.0"
   }
 }

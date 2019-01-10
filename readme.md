@@ -39,18 +39,11 @@ rollup({
 })
 ```
 
-
-## Contributing
-
-* ⇄ Pull requests and ★ Stars are always welcome.
-* For bugs and feature requests, please create an issue.
-* Pull requests must be accompanied by passing automated tests (`$ npm test`).
-
 ## [License](license)
 
 
 ## Copyright
 
-<img src="https://cdn.rawgit.com/sebastian-software/sebastian-software-brand/3d93746f/sebastiansoftware-en.svg" alt="Sebastian Software GmbH Logo" width="250" height="200"/>
+<img src="https://cdn.rawgit.com/sebastian-software/sebastian-software-brand/0d4ec9d6/sebastiansoftware-en.svg" alt="Logo of Sebastian Software GmbH, Mainz, Germany" width="460" height="160"/>
 
-Copyright 2017<br/>[Sebastian Software GmbH](http://www.sebastian-software.de)
+Copyright 2017-2019<br/>[Sebastian Software GmbH](http://www.sebastian-software.de)
