@@ -5,6 +5,7 @@ import executablePlugin from "../src"
 
 const stat = denodeify(fs.stat)
 const writeFile = denodeify(fs.writeFile)
+const removeFile = denodeify(fs.unlinkSync)
 
 /* eslint-disable no-magic-numbers */
 
@@ -17,6 +18,7 @@ test("Makes executable", () =>
       plugin.generateBundle({
         file: "testfile"
       })
+      plugin.writeBundle()
 
       return stat("testfile")
     })
@@ -27,5 +29,8 @@ test("Makes executable", () =>
       } else {
         expect(mode).toBe(0o100755)
       }
+    })
+    .then(() => {
+      removeFile("testfile")
     })
 )

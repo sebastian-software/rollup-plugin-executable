@@ -5,16 +5,26 @@ import { statSync, chmodSync } from "fs"
 const EXECUTABLE_MODE = 0o111
 
 export default function executable(options = {}) {
+  let file = null
+
   return {
     name: "rollup-plugin-executable",
 
-    generateBundle: ({ file }) => {
-      const { mode } = statSync(file)
+    generateBundle(options) {
+      // Store main output file name here as `writeBundle` does not
+      // have this data as it seems.
+      file = options.file
+    },
 
-      // eslint-disable-next-line no-bitwise
-      const newMode = mode | EXECUTABLE_MODE
+    writeBundle() {
+      if (file) {
+        const { mode } = statSync(file)
 
-      chmodSync(file, newMode)
+        // eslint-disable-next-line no-bitwise
+        const newMode = mode | EXECUTABLE_MODE
+
+        chmodSync(file, newMode)
+      }
     }
   }
 }
