@@ -8,13 +8,13 @@ export default function executable(options = {}) {
   return {
     name: "rollup-plugin-executable",
 
-    generateBundle: ({ fileName }) => {
-      const { mode } = statSync(fileName)
+    generateBundle: ({ file }) => {
+      const { mode } = statSync(file)
 
       // eslint-disable-next-line no-bitwise
       const newMode = mode | EXECUTABLE_MODE
 
-      chmodSync(fileName, newMode)
+      chmodSync(file, newMode)
     }
   }
 }

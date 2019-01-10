@@ -15,7 +15,7 @@ test("Makes executable", () =>
     .then(() => {
       const plugin = executablePlugin()
       plugin.generateBundle({
-        fileName: "testfile"
+        file: "testfile"
       })
 
       return stat("testfile")
