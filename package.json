@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-executable",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "The Rollup Executable Plugin changes output javascript file's executable state to ON on unix like operating systems.",
   "keywords": [
     "rollup-plugin",
