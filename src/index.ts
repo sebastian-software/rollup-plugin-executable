@@ -1,16 +1,11 @@
 // eslint-disable-next-line filenames/match-exported
 import { chmodSync, statSync } from "fs"
+import { Plugin } from "rollup"
 
 // Set EXECUTABLE bit on file mode
 const EXECUTABLE_MODE = 0o111
 
-interface Executable {
-  name: string;
-  generateBundle(options: any): void;
-  writeBundle(): void;
-}
-
-export default function executable(options = {}): Executable {
+export default function executable(): Plugin {
   let file = null
 
   return {
