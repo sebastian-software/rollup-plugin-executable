@@ -13,9 +13,11 @@ test("Makes executable", async () => {
   })
 
   const plugin = executablePlugin()
+  // @ts-ignore
   plugin.generateBundle({
     file: "testfile"
   })
+  // @ts-ignore
   plugin.writeBundle()
 
   const { mode } = await stat("testfile")
