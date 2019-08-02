@@ -47,13 +47,14 @@
   "devDependencies": {
     "@babel/register": "^7.4.4",
     "@effective/eslint-config": "^0.7.12",
+    "@types/jest": "^24.0.16",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
     "babel-preset-edge": "^5.3.0",
-    "eslint": "^5.16.0",
-    "eslint-config-readable": "^2.3.2",
+    "eslint": "^6.1.0",
     "jest": "^24.8.0",
     "preppy": "^8.1.4",
+    "prettier": "^1.18.2",
     "rimraf": "^2.6.3",
     "rollup": "^1.16.1",
     "typescript": "^3.5.3"

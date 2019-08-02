@@ -1,17 +1,17 @@
 // eslint-disable-next-line filenames/match-exported
 import { chmodSync, statSync } from "fs"
 
+import { Plugin } from "rollup"
+
+type RequiredParts<T, Keys extends keyof T = keyof T> = Pick<T, Exclude<keyof T, Keys>> &
+  Required<Pick<T, Extract<keyof T, Keys>>>
+export type ExecutablePlugin = RequiredParts<Plugin, "generateBundle" | "writeBundle">
+
 // Set EXECUTABLE bit on file mode
 const EXECUTABLE_MODE = 0o111
 
-interface Executable {
-  name: string;
-  generateBundle(options: any): void;
-  writeBundle(): void;
-}
-
-export default function executable(options = {}): Executable {
-  let file = null
+export default function executable(): ExecutablePlugin {
+  let file: string | undefined
 
   return {
     name: "rollup-plugin-executable",
