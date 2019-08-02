@@ -23,15 +23,16 @@
   "license": "MIT",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "lint:js": "eslint .",
-    "fix:js": "eslint --fix .",
-    "format:js": "prettier --write '**/*.js' && npm run fix:js",
+    "lint": "eslint 'src/**/*.{js,ts}'",
+    "lint:fix": "eslint --fix 'src/**/*.{js,ts}'",
+    "format:js": "prettier --write '**/*.js' && npm run lint:fix",
     "release": "release-it --github.release --npm.publish --non-interactive",
     "release:minor": "release-it --github.release --npm.publish --non-interactive --increment minor",
     "release:major": "release-it --github.release --npm.publish --non-interactive --increment major",
-    "test": "npm run prepublish && jest --coverage",
-    "prepublish": "rimraf lib && preppy"
+    "test": "jest --coverage",
+    "prepare": "rimraf lib && preppy"
   },
   "repository": {
     "type": "git",
@@ -45,14 +46,16 @@
   },
   "devDependencies": {
     "@babel/register": "^7.4.4",
+    "@effective/eslint-config": "^0.7.12",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
     "babel-preset-edge": "^5.3.0",
-    "denodeify": "^1.2.1",
+    "eslint": "^5.16.0",
     "eslint-config-readable": "^2.3.2",
     "jest": "^24.8.0",
     "preppy": "^8.1.4",
     "rimraf": "^2.6.3",
-    "rollup": "^1.16.1"
+    "rollup": "^1.16.1",
+    "typescript": "^3.5.3"
   }
 }
