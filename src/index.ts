@@ -3,8 +3,8 @@ import { chmodSync, statSync } from "fs"
 
 import { Plugin } from "rollup"
 
-type RequiredParts<T, Keys extends keyof T = keyof T> = Pick<T, Exclude<keyof T, Keys>> &
-  Required<Pick<T, Extract<keyof T, Keys>>>
+type RequiredParts<T, Keys extends keyof T = keyof T> =
+  Pick<T, Exclude<keyof T, Keys>> & Required<Pick<T, Extract<keyof T, Keys>>>
 export type ExecutablePlugin = RequiredParts<Plugin, "generateBundle" | "writeBundle">
 
 // Set EXECUTABLE bit on file mode
