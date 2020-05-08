@@ -8,7 +8,7 @@
     "executable"
   ],
   "engines": {
-    "node": ">=8.0.0",
+    "node": ">=10.0.0",
     "npm": ">=4.0.0",
     "yarn": ">=1.0.0"
   },
@@ -26,11 +26,11 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "lint": "eslint 'src/**/*.{js,ts}'",
-    "lint:fix": "eslint --fix 'src/**/*.{js,ts}'",
-    "format:js": "prettier --write '**/*.js' && npm run lint:fix",
-    "release": "release-it --github.release --npm.publish --non-interactive",
-    "release:minor": "release-it --github.release --npm.publish --non-interactive --increment minor",
-    "release:major": "release-it --github.release --npm.publish --non-interactive --increment major",
+    "fix": "eslint --fix 'src/**/*.{js,ts}'",
+    "format": "prettier --write '**/*.js' && npm run fix",
+    "release": "release-it patch",
+    "release:minor": "release-it minor",
+    "release:major": "release-it major",
     "test": "jest --coverage",
     "prepare": "rimraf lib && preppy"
   },
