@@ -1,11 +1,9 @@
-# Rollup Executable <br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Build Status Unix][travis-img]][travis] [![Build Status Windows][appveyor-img]][appveyor] [![Dependencies][deps-img]][deps]
+# Rollup Executable <br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Build Status Unix][travis-img]][travis] [![Build Status Windows][appveyor-img]][appveyor]
 
 The Rollup Executable Plugin makes output file executable on UNIX like operating systems.
 
 [sponsor-img]: https://img.shields.io/badge/Sponsored%20by-Sebastian%20Software-692446.svg
 [sponsor]: https://www.sebastian-software.de
-[deps]: https://david-dm.org/sebastian-software/rollup-plugin-executable
-[deps-img]: https://david-dm.org/sebastian-software/rollup-plugin-executable.svg
 [npm]: https://www.npmjs.com/package/rollup-plugin-executable
 [npm-downloads-img]: https://img.shields.io/npm/dm/rollup-plugin-executable.svg
 [npm-version-img]: https://img.shields.io/npm/v/rollup-plugin-executable.svg
