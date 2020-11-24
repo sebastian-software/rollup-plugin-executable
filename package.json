@@ -28,9 +28,9 @@
     "lint": "eslint 'src/**/*.{js,ts}'",
     "fix": "eslint --fix 'src/**/*.{js,ts}'",
     "format": "prettier --write '**/*.js' && npm run fix",
-    "release": "release-it patch",
-    "release:minor": "release-it minor",
-    "release:major": "release-it major",
+    "release": "git push && release-it --ci patch",
+    "release:minor": "git push && release-it --ci minor",
+    "release:major": "git push && release-it --ci major",
     "test": "jest --coverage",
     "prepare": "rimraf lib && preppy"
   },
